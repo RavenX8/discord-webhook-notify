@@ -28,6 +28,7 @@ export const longSeverity = {
  */
 export async function getDefaultDescription() {
   const context = github.context;
+  console.log(context);
   return (
     `- **Repository:** [${context.payload.repository.name}](${context.serverUrl}/${context.payload.repository.full_name})\n` +
     `- **Workflow:** ${context.workflow}\n` +
