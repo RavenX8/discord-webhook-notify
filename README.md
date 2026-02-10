@@ -192,7 +192,7 @@ Using lots of defaults (not recommended), but still adding a message in the embe
 ```yaml
 
   - name: Test Success
-    uses: rjstone/discord-webhook-notify@v2
+    uses: RavenX8/discord-webhook-notify@v2
     if: success()
     with:
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
@@ -206,7 +206,7 @@ Without any embed:
 ```yaml
 
   - name: Text Notify
-    uses: rjstone/discord-webhook-notify@v2
+    uses: RavenX8/discord-webhook-notify@v2
     with:
       webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       username: AwesomeSauce GitHub Repo Build Process
@@ -224,7 +224,7 @@ Something more fully customized:
 ```yaml
 
   - name: Test Custom
-    uses: rjstone/discord-webhook-notify@v2
+    uses: RavenX8/discord-webhook-notify@v2
     with:
       webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       username: Custom Bot Username
