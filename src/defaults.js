@@ -30,9 +30,9 @@ export async function getDefaultDescription() {
   const context = github.context;
   console.log(context);
   return (
-    `- **Repository:** [${context.payload.repository.name}](${context.serverUrl}/${context.payload.repository.full_name})\n` +
+    `- **Repository:** [${github.repository}](${github.server_url}/${github.repository})\n` +
     `- **Workflow:** ${context.workflow}\n` +
     `- **Event:** ${context.eventName}\n` +
-    `- **Triggering Actor:** ${context.actor}\n`
+    `- **Triggering Actor:** ${github.triggering_actor}\n`
   );
 }
